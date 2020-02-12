@@ -6,7 +6,12 @@ ruby '2.5.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4'
 # Use sqlite3 as the database for Active Record
-
+gem 'devise'
+gem 'twitter-bootstrap-rails'
+gem 'jquery-rails'
+gem 'devise-bootstrap-views'
+gem 'stock_quote'
+gem 'font-awesome-rails'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -27,7 +32,8 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
-
+gem 'bootstrap', '~> 4.0.0'
+gem 'iex-ruby-client'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
@@ -38,6 +44,7 @@ gem 'devise'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
+  gem 'sqlite3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -52,7 +59,7 @@ group :development do
 end
 
 group :test do
-  gem 'sqlite3'
+
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
